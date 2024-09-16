@@ -19,7 +19,7 @@ build: fmtcheck vet
 
 build-local: build
 	mkdir -p $(PLUGIN_DIR)
-	mv $(HOME)/go/bin/terraform-provider-ibm $(PLUGIN_DIR)/terraform-provider-ibm_v$(VERSION)
+	mv $(GOPATH)/bin/terraform-provider-ibm $(PLUGIN_DIR)/terraform-provider-ibm_v$(VERSION)
 	./scripts/post-build.sh $(VERSION)
 
 bin: fmtcheck vet tools
